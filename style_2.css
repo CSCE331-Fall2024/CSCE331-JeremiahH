@@ -1,0 +1,356 @@
+:root{
+    --placeholder: rgb(243, 235, 242);
+    --maroon:rgb(128,0,0);
+    --trans: all 0.3s ease-in-out;
+}
+
+/* Defaults */
+body{
+    background-color:lightgrey;
+}
+
+/* Navigation Bar */
+.navbar{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: transparent;
+    padding: 1rem 0;
+    z-index: 999;
+}
+
+.navbar .container{
+    justify-content:space-between;
+}
+
+.navbar .site-brand{
+    color:white;
+    font-size: 2.4rem;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;
+    opacity: 0.95;
+    border: 3px solid white;
+    padding: 0.2rem;
+}
+.site-brand span{
+    font-weight: 150;
+}
+
+.navbar .navbar-show-btn{
+    background: transparent;
+    color: white;
+    font-size: 2rem;
+    opacity: 0.9;
+    transition: black;
+    border: none;
+}
+#navbar-collapse{
+    background-color: black;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 300px;
+    height: 100%;
+    padding: 2rem;
+    transform: translateX(100%);
+    transition: var(--trans);
+}
+.navbar-collapse-rmw{
+    transform: translateX(0)!important;
+}
+#navbar-close-btn{
+    background: none;
+    color: #fff;
+    width: 35px;
+    height: 35px;
+    border-radius: 0.2rem;
+    font-size: 2rem;
+    transition: var(--trans);
+    position: absolute;
+    right: 1rem;
+    top: 2rem;
+    border: none;
+}
+#navbar-close-btn:hover{
+    background-color: #fff;
+    color: black;
+}
+.navbar-nav{
+    margin-top: 5rem;
+}
+.nav-item{
+    margin: 1.6rem 0;
+}
+.nav-link{
+    color: #fff;
+    font-size: 1.2rem;
+    transition: var(--trans);
+}
+.nav-link:hover{
+    opacity: 0.8;
+}
+#change-theme{
+    cursor: pointer;
+    color:red;
+}
+.navbar-cng{
+    background-color: var(--placeholder);
+    box-shadow: 0px 4px 5px 0px rgba(48, 48, 48, 0.2);
+    transition: var(--trans);
+}
+.navbar-cng .site-brand{
+    color: black;
+    border: 3px solid black;
+}
+.navbar-cng .navbar-show-btn{
+    color: black;
+}
+
+/* Home Page */
+header.header-h{
+    min-height: 100vh;
+    padding-top:300px;
+    background: linear-gradient(rgba(0, 0, 0, 0.4), 
+    rgba(0, 0, 0, 0.4)), url(../images/Zilker\ Park-2.jpg) center/cover no-repeat;
+    flex-direction: column;
+    color: #fff;
+    text-align: center;
+}
+.header-h .header-title h1{
+    color: var(--placeholder);
+    font-size:56px;
+    text-align: center;
+}
+
+.header-h .about-me h2{
+    color: var(--placeholder);
+    font-size:40px;
+    text-align: center;
+}
+.about-me img{
+    display:none;
+}
+.about-me p{
+    color: var(--placeholder);
+    text-align: center;
+    font-size: 20px;
+}
+.about-me{
+    flex-direction: column;
+    padding: 0.2rem;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 0.2rem;
+}
+.about-me form{
+    flex-direction: column;
+    margin-top: 1.8rem;
+}
+
+/* Portfolio */
+.header-title-p{
+    text-align:center;
+    font-size:75px;
+    margin-top:150px;
+}
+.information{
+    background-color:#fff;
+    transition: var(--trans);
+    padding:20px;
+    margin-top: 50px;
+    min-height:400px;
+}
+.information h1, .information img{
+    position: relative;
+}
+.information img{
+    width:300px;
+    height:300px;
+    float:left;
+    border:2px solid black;
+}
+.information h1{
+    text-align: center;
+    padding-top: 20px;
+}
+.date{
+    position:absolute;
+    background-color:var(--maroon);
+    color:#fff;
+    padding:0.5rem;
+    height: 38px;
+    min-width: 160px;
+    text-transform: uppercase;
+}
+.information p{
+    margin-top: 100px;
+    margin-left:325px;
+    font-size: 30px;
+    position:relative;
+}
+.Future-Projects{
+    text-align: center;
+    font-size:60px;
+    margin-top:100px;
+    border:3px solid black;
+    padding: 15px;
+}
+.blocks{
+    margin-bottom:100px;
+}
+
+
+/* Qualifications */
+.header-title-q{
+    font-size:75px;
+    margin-top:150px;
+    text-align:center;
+}
+.boxes{
+    color: white;
+    flex-direction: row;
+    display: flex;
+    justify-content:space-between;
+    margin-bottom: 100px;
+}
+.boxes h2{
+    text-align: center;
+    font-size: 35px;
+    color:rgb(232, 189, 113);
+    border:2px solid black;
+    padding:5px;
+    border-radius:10px;
+}
+.languages{
+    background-color: rgba(128, 0, 0, 1);
+    border:3px solid black;
+    position:relative;
+    padding:30px;
+    width: 400px;
+    margin-right: 50px;
+    float: left;
+    text-align:justify;
+    border-radius:10px;
+}
+.languages li{
+    display: block;
+    width: 25%;
+    float: left;
+}
+.certifications{
+    background-color: rgba(128, 0, 0, 1);
+    border:3px solid black;
+    padding: 30px;
+    margin-left: 50px;
+    width: 400px;
+    float:right;
+    text-align:left;
+    border-radius:10px;
+}
+.certifications li{
+    display: block;
+    width: 25%;
+    float: left;
+}
+.interests{
+    display:none;
+}
+.interests-2{
+    float:right;
+    padding:30px;
+    margin-top:350px;
+    border-radius:10px;
+    background-color:rgba(128, 0, 0, 1);
+    border:3px solid black;
+    max-width:500px;
+}
+.interests-2 li{
+    font-size:50px;
+    color:white;
+    margin-top:50px;
+}
+.interests-2 h2{
+    text-align:center;
+    font-size:60px;
+    border:3px solid black;
+    color:rgb(232, 189, 113);
+    border-radius:10px;
+}
+.resume{
+    text-align:center;
+    font-size:30px;
+    float:left;
+    padding:0px;
+    /* margin-top:100px; */
+    max-width:700px;
+    background-color:rgba(0, 0, 0, 0.4);
+    margin-bottom:100px;
+}
+object{
+    height: 600px;
+    width: 700px;
+}
+
+
+/* Service */
+.header-title-s{
+    font-size:75px;
+    margin-top:150px;
+    text-align:center;
+}
+.sec{
+    background-color:#fff;
+    transition: var(--trans);
+    padding:20px;
+    margin-top: 50px;
+    min-height:400px;
+    margin-bottom:50px;
+}
+.sec h1, .sec img{
+    position: relative;
+}
+.sec img{
+    width:300px;
+    height:300px;
+    float:left;
+    border:2px solid black;
+}
+.sec h1{
+    text-align: center;
+    padding-top: 20px;
+}
+.sec-title{
+    position:absolute;
+    background-color:var(--maroon);
+    color:#fff;
+    padding:0.5rem;
+    height: 38px;
+    font-size:25px;
+    min-width: 160px;
+    text-transform: uppercase;
+}
+.sec p{
+    margin-top: 100px;
+    margin-left:325px;
+    font-size: 30px;
+    position:relative;
+}
+.sec h1{
+    display:none;
+}
+.sec a{
+    text-decoration:underline;
+    color:aqua;
+}
+
+
+
+
+/* Extra */
+#navbar-collapse img{
+    width:100px;
+    height:100px;
+    background-color:#fff;
+    border-radius:1rem;
+    margin:265px;
+    margin-left:200px;
+}
